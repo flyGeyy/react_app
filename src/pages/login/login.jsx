@@ -1,18 +1,18 @@
 import React,{Component} from 'react'
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button} from 'antd'
+import './index.less'
 const Item=Form.Item
 export default class Login extends Component{
     render(){
         return(
-            <div>
+            <div className='login-header'>
                 <h2>后台管理</h2>
+                <Button type="primary">Primary</Button>
                 <LoginForm login={this.login}/>
             </div>
         )
     }
 }
-
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
 class LoginForm extends Component {
   handleSubmit = e => {
@@ -60,7 +60,7 @@ class LoginForm extends Component {
   }
 }
 
-const LoginForm = Form.create()(LoginForm);
+ LoginForm = Form.create()(LoginForm);
 
 
 
